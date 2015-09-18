@@ -1,7 +1,6 @@
 #!/bin/bash
 
 LIBARCHIVE_FILE=libarchive-${LIBARCHIVE_VERSION}.tar.gz
-LIBARCHIVE_FILE_MD5=efad5a503f66329bb9d2f4308b5de98a
 LIBARCHIVE_URL="http://www.libarchive.org/downloads/${LIBARCHIVE_FILE}"
 LIBARCHIVE_DIR=${PROJECT_DIR}/_libarchive_
 LIBARCHIVE_VERSION_FILE=${LIBARCHIVE_DIR}/build/version
