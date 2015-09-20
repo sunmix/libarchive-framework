@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double libarchive_OSXVersionNumber;
 FOUNDATION_EXPORT const unsigned char libarchive_OSXVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <libarchive_OSX/PublicHeader.h>
-#import <libarchive_iOS/archive.h>
-#import <libarchive_iOS/archive_entry.h>
+#import <libarchive_OSX/archive.h>
+#import <libarchive_OSX/archive_entry.h>
