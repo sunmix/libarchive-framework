@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C531341C1BAE90EC0054FC94 /* libarchive.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FA69501BABF73900754302 /* libarchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5FA685F1BABDB4A00754302 /* archive_acl.c in Sources */ = {isa = PBXBuildFile; fileRef = C5FA67FC1BABD98800754302 /* archive_acl.c */; settings = {ASSET_TAGS = (); }; };
 		C5FA68601BABDB4A00754302 /* archive_check_magic.c in Sources */ = {isa = PBXBuildFile; fileRef = C5FA67FD1BABD98800754302 /* archive_check_magic.c */; settings = {ASSET_TAGS = (); }; };
 		C5FA68611BABDB4A00754302 /* archive_cmdline.c in Sources */ = {isa = PBXBuildFile; fileRef = C5FA67FE1BABD98800754302 /* archive_cmdline.c */; settings = {ASSET_TAGS = (); }; };
@@ -233,8 +234,7 @@
 		C5FA693C1BABDC2500754302 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FA693B1BABDC2500754302 /* libiconv.tbd */; };
 		C5FA693E1BABDC2B00754302 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FA693D1BABDC2B00754302 /* libxml2.tbd */; };
 		C5FA69401BABDC3400754302 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FA693F1BABDC3400754302 /* liblzma.tbd */; };
-		C5FA69511BABF79600754302 /* libarchive_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FA69501BABF73900754302 /* libarchive_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5FA69521BABF7A600754302 /* libarchive_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FA694E1BABF73900754302 /* libarchive_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5FA69511BABF79600754302 /* libarchive.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FA69501BABF73900754302 /* libarchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,8 +256,8 @@
 
 /* Begin PBXFileReference section */
 		C5FA67B51BABBA5100754302 /* xcodescripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcodescripts; sourceTree = "<group>"; };
-		C5FA67BC1BABBF4400754302 /* libarchive_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libarchive_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5FA67CA1BABBF6600754302 /* libarchive_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libarchive_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FA67BC1BABBF4400754302 /* libarchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libarchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FA67CA1BABBF6600754302 /* libarchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libarchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FA67D91BABC2B600754302 /* libarchive_OSX-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive_OSX-Debug.xcconfig"; sourceTree = "<group>"; };
 		C5FA67DA1BABC2B600754302 /* libarchive_OSX-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive_OSX-Release.xcconfig"; sourceTree = "<group>"; };
 		C5FA67DB1BABC2B600754302 /* libarchive_OSX-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive_OSX-Shared.xcconfig"; sourceTree = "<group>"; };
@@ -400,9 +400,8 @@
 		C5FA693D1BABDC2B00754302 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		C5FA693F1BABDC3400754302 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib/liblzma.tbd; sourceTree = DEVELOPER_DIR; };
 		C5FA694D1BABF73900754302 /* libarchive_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libarchive_iOS-Info.plist"; sourceTree = "<group>"; };
-		C5FA694E1BABF73900754302 /* libarchive_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libarchive_iOS.h; sourceTree = "<group>"; };
 		C5FA694F1BABF73900754302 /* libarchive_OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libarchive_OSX-Info.plist"; sourceTree = "<group>"; };
-		C5FA69501BABF73900754302 /* libarchive_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libarchive_OSX.h; sourceTree = "<group>"; };
+		C5FA69501BABF73900754302 /* libarchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libarchive.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,9 +436,8 @@
 			isa = PBXGroup;
 			children = (
 				C5FA694D1BABF73900754302 /* libarchive_iOS-Info.plist */,
-				C5FA694E1BABF73900754302 /* libarchive_iOS.h */,
 				C5FA694F1BABF73900754302 /* libarchive_OSX-Info.plist */,
-				C5FA69501BABF73900754302 /* libarchive_OSX.h */,
+				C5FA69501BABF73900754302 /* libarchive.h */,
 				C5FA67D21BABC2B600754302 /* xcodeconfig */,
 				C5FA67B51BABBA5100754302 /* xcodescripts */,
 				C5FA67E21BABD8BE00754302 /* libarchive */,
@@ -451,8 +449,8 @@
 		C5FA67BD1BABBF4400754302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5FA67BC1BABBF4400754302 /* libarchive_OSX.framework */,
-				C5FA67CA1BABBF6600754302 /* libarchive_iOS.framework */,
+				C5FA67BC1BABBF4400754302 /* libarchive.framework */,
+				C5FA67CA1BABBF6600754302 /* libarchive.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -642,7 +640,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5FA69511BABF79600754302 /* libarchive_OSX.h in Headers */,
+				C5FA69511BABF79600754302 /* libarchive.h in Headers */,
 				C5FA69251BABDB5B00754302 /* archive.h in Headers */,
 				C5FA69261BABDB5B00754302 /* archive_entry.h in Headers */,
 			);
@@ -652,7 +650,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5FA69521BABF7A600754302 /* libarchive_iOS.h in Headers */,
+				C531341C1BAE90EC0054FC94 /* libarchive.h in Headers */,
 				C5FA69271BABDB5C00754302 /* archive.h in Headers */,
 				C5FA69281BABDB5C00754302 /* archive_entry.h in Headers */,
 			);
@@ -677,7 +675,7 @@
 			);
 			name = libarchive_OSX;
 			productName = "libarchive-OSX";
-			productReference = C5FA67BC1BABBF4400754302 /* libarchive_OSX.framework */;
+			productReference = C5FA67BC1BABBF4400754302 /* libarchive.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C5FA67C91BABBF6600754302 /* libarchive_iOS */ = {
@@ -696,7 +694,7 @@
 			);
 			name = libarchive_iOS;
 			productName = "libarchive-iOS";
-			productReference = C5FA67CA1BABBF6600754302 /* libarchive_iOS.framework */;
+			productReference = C5FA67CA1BABBF6600754302 /* libarchive.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

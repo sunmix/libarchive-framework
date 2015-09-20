@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C5FA67C91BABBF6600754302"
-               BuildableName = "libarchive_iOS.framework"
+               BuildableName = "libarchive.framework"
                BlueprintName = "libarchive_iOS"
                ReferencedContainer = "container:libarchive.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C5FA67C91BABBF6600754302"
-            BuildableName = "libarchive_iOS.framework"
+            BuildableName = "libarchive.framework"
             BlueprintName = "libarchive_iOS"
             ReferencedContainer = "container:libarchive.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C5FA67C91BABBF6600754302"
-            BuildableName = "libarchive_iOS.framework"
+            BuildableName = "libarchive.framework"
             BlueprintName = "libarchive_iOS"
             ReferencedContainer = "container:libarchive.xcodeproj">
          </BuildableReference>
