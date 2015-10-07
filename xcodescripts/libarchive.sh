@@ -1,40 +1,39 @@
 #!/bin/bash
 
-LIBARCHIVE_FILE=libarchive-${LIBARCHIVE_VERSION}.tar.gz
-LIBARCHIVE_URL="http://www.libarchive.org/downloads/${LIBARCHIVE_FILE}"
-LIBARCHIVE_DIR=${PROJECT_DIR}/_libarchive_
-LIBARCHIVE_VERSION_FILE=${LIBARCHIVE_DIR}/build/version
+LIBARCHIVE_TARBALL=libarchive-${LIBARCHIVE_VERSION}.tar.gz
+libarchive_url="http://www.libarchive.org/downloads/${LIBARCHIVE_TARBALL}"
+libarchive_dir=${PROJECT_DIR}/_libarchive_
+libarchive_version_file=${libarchive_dir}/build/version
 
-if [ -f "${LIBARCHIVE_VERSION_FILE}" ]; then
-  echo "note: Libarchive exists!"
-  if [ "${LIBARCHIVE_VERSION_NUMBER}" != "$( cat ${LIBARCHIVE_VERSION_FILE} )" ]; then
-    echo "warning: Libarchive exists. But its version is NOT ${LIBARCHIVE_VERSION}!
-    Please make sure you know what is going on."
-  fi
-  exit
+if [ -f "${libarchive_version_file}" ]; then
+  echo "note: Libarchive exists in the project folder."
+  [ "${LIBARCHIVE_VERSION_NUMBER}" != "$( cat ${libarchive_version_file} )" ] && {
+    printf "%s %s\n" \
+    "warning: Libarchive's version is NOT ${LIBARCHIVE_VERSION}!" \
+    "Make sure you know what is going on."
+  }
+  # Exit, since Libarchive exists.
+  exit 0
 fi
 
 cd ${TEMP_ROOT}
 
-if [ ! -f "${LIBARCHIVE_FILE}" ] || [ "${LIBARCHIVE_FILE_MD5}" != "$( md5 -q ${LIBARCHIVE_FILE} )" ]; then
-  [ -f ${LIBARCHIVE_FILE} ] && rm ${LIBARCHIVE_FILE}
-  echo "note: Downloading libarchive from ${LIBARCHIVE_URL}"
-  /usr/bin/curl -# -O ${LIBARCHIVE_URL} && echo "note: Downloaded!"
-  if [ "${LIBARCHIVE_FILE_MD5}" != "$( md5 -q ${LIBARCHIVE_FILE} )" ]; then
-    echo "error: MD5 NOT matches!"
-    exit 1
-  fi
+if [ ! -f "${LIBARCHIVE_TARBALL}" ] || [ "${LIBARCHIVE_MD5}" != "$( md5 -q ${LIBARCHIVE_TARBALL} )" ]; then
+  [ -e ${LIBARCHIVE_TARBALL} ] && rm ${LIBARCHIVE_TARBALL}
+  echo "note: Download ${libarchive_url}"
+  /usr/bin/curl -# -O ${libarchive_url} && echo "note: Downloaded!"
+  [ "${LIBARCHIVE_MD5}" != "$( md5 -q ${LIBARCHIVE_TARBALL} )" ] && { echo "error: MD5 NOT matches!"; exit 1; }
 fi
 
-echo "note: Unarchive ${LIBARCHIVE_FILE}"
-tar xzf ${LIBARCHIVE_FILE}
+echo "note: Unarchive ${LIBARCHIVE_TARBALL}"
+tar xzf ${LIBARCHIVE_TARBALL}
 
 echo "note: Move libarchive to workspace folder."
-mv libarchive-${LIBARCHIVE_VERSION} ${LIBARCHIVE_DIR}
+mv ${LIBARCHIVE_TARBALL%.tar.gz} ${libarchive_dir}
 
-cd ${LIBARCHIVE_DIR}
-echo "note: Generate config.h"
-./configure --disable-bsdcpio --disable-bsdtar
+# cd ${libarchive_dir}
+# echo "note: Generate config.h"
+# ./configure --disable-bsdcpio --disable-bsdtar
 
-echo "note: Bootstrap done!"
+echo "note: Bootstrap Libarchive done!"
 exit

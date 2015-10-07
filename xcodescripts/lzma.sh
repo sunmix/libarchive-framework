@@ -10,24 +10,26 @@ LZMA_VERSION_MINOR=${LZMA_VERSION_ARRAY[1]}
 LZMA_VERSION_PATCH=${LZMA_VERSION_ARRAY[2]}
 
 if [ -f "${LZMA_VERSION_FILE}" ]; then
-	echo "note: XZ(LZMA) exists."
-	for x in MAJOR MINOR PATCH; do
-		version_name=LZMA_VERSION_${x}
-		grep "${version_name} ${!version_name}" ${LZMA_VERSION_FILE} >/dev/null || {
-		    echo -e "warning: XZ(LZMA) exists in the project folder, but its version is NOT ${XZ_VERSION}!\nPlease make sure you know what is going on."
-		}
-	done
-	# Exit, since XZ(LZMA) exists.
-	exit 0
+  echo "note: XZ(LZMA) exists in the project folder."
+  for x in MAJOR MINOR PATCH; do
+    version_name=LZMA_VERSION_${x}
+    grep "${version_name} ${!version_name}" ${LZMA_VERSION_FILE} >/dev/null || {
+      printf "%s %s\n" \
+      "warning: XZ(LZMA)'s version is NOT ${XZ_VERSION}!" \
+      "Make sure you know what is going on."
+    }
+  done
+  # Exit, since XZ(LZMA) exists.
+  exit 0
 fi
 
 cd ${TEMP_ROOT}
 
-if [ ! -f "${XZ_TARBALL}" ] || [ "${XZ_TARBALL_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ]; then
+if [ ! -f "${XZ_TARBALL}" ] || [ "${XZ_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ]; then
   [ -e "${XZ_TARBALL}" ] && rm "${XZ_TARBALL}"
   echo "note: Download ${XZ_URL}"
   /usr/bin/curl -# -O ${XZ_URL} && echo "note: Downloaded!"
-  [ "${XZ_TARBALL_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ] && { echo "error: MD5 NOT matches!"; exit 1; }
+  [ "${XZ_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ] && { echo "error: MD5 NOT matches!"; exit 1; }
 fi
 
 echo "note: Unarchive ${XZ_TARBALL}"
