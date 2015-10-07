@@ -11,7 +11,8 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = C5FA67B41BABB9FC00754302 /* Build configuration list for PBXAggregateTarget "Bootstrap" */;
 			buildPhases = (
-				C5FA67B61BABBA7C00754302 /* ShellScript */,
+				C5F1A5E61BC4C87D00B81E2D /* lzma.sh */,
+				C5FA67B61BABBA7C00754302 /* libarchive.sh */,
 			);
 			dependencies = (
 			);
@@ -753,18 +754,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C5FA67B61BABBA7C00754302 /* ShellScript */ = {
+		C5F1A5E61BC4C87D00B81E2D /* lzma.sh */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = lzma.sh;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "${PROJECT_DIR}/xcodescripts/bootstrap.sh";
+			shellScript = "${PROJECT_DIR}/xcodescripts/lzma.sh";
+		};
+		C5FA67B61BABBA7C00754302 /* libarchive.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = libarchive.sh;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "${PROJECT_DIR}/xcodescripts/libarchive.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
