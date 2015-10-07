@@ -28,7 +28,7 @@ cd ${TEMP_ROOT}
 if [ ! -f "${XZ_TARBALL}" ] || [ "${XZ_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ]; then
   [ -e "${XZ_TARBALL}" ] && rm "${XZ_TARBALL}"
   echo "note: Download ${XZ_URL}"
-  /usr/bin/curl -# -O ${XZ_URL} && echo "note: Downloaded!"
+  /usr/bin/curl -s -O ${XZ_URL} && echo "note: Downloaded!"
   [ "${XZ_MD5}" != "$( md5 -q ${XZ_TARBALL} )" ] && { echo "error: MD5 NOT matches!"; exit 1; }
 fi
 

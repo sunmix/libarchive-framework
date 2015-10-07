@@ -21,7 +21,7 @@ cd ${TEMP_ROOT}
 if [ ! -f "${LIBARCHIVE_TARBALL}" ] || [ "${LIBARCHIVE_MD5}" != "$( md5 -q ${LIBARCHIVE_TARBALL} )" ]; then
   [ -e ${LIBARCHIVE_TARBALL} ] && rm ${LIBARCHIVE_TARBALL}
   echo "note: Download ${libarchive_url}"
-  /usr/bin/curl -# -O ${libarchive_url} && echo "note: Downloaded!"
+  /usr/bin/curl -s -O ${libarchive_url} && echo "note: Downloaded!"
   [ "${LIBARCHIVE_MD5}" != "$( md5 -q ${LIBARCHIVE_TARBALL} )" ] && { echo "error: MD5 NOT matches!"; exit 1; }
 fi
 
