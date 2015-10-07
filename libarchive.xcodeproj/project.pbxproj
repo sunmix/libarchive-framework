@@ -267,7 +267,7 @@
 		C5FA67DF1BABD05600754302 /* libarchive-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive-Shared.xcconfig"; sourceTree = "<group>"; };
 		C5FA67E01BABD14200754302 /* libarchive-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive-Debug.xcconfig"; sourceTree = "<group>"; };
 		C5FA67E11BABD18400754302 /* libarchive-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "libarchive-Release.xcconfig"; sourceTree = "<group>"; };
-		C5FA67E51BABD95B00754302 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = _libarchive_/config.h; sourceTree = "<group>"; };
+		C5FA67E51BABD95B00754302 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		C5FA67E61BABD95B00754302 /* archive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = archive.h; path = _libarchive_/libarchive/archive.h; sourceTree = "<group>"; };
 		C5FA67E71BABD95B00754302 /* archive_cmdline_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = archive_cmdline_private.h; path = _libarchive_/libarchive/archive_cmdline_private.h; sourceTree = "<group>"; };
 		C5FA67E81BABD95B00754302 /* archive_crc32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = archive_crc32.h; path = _libarchive_/libarchive/archive_crc32.h; sourceTree = "<group>"; };
@@ -438,6 +438,7 @@
 				C5FA694D1BABF73900754302 /* libarchive_iOS-Info.plist */,
 				C5FA694F1BABF73900754302 /* libarchive_OSX-Info.plist */,
 				C5FA69501BABF73900754302 /* libarchive.h */,
+				C5FA67E51BABD95B00754302 /* config.h */,
 				C5FA67D21BABC2B600754302 /* xcodeconfig */,
 				C5FA67B51BABBA5100754302 /* xcodescripts */,
 				C5FA67E21BABD8BE00754302 /* libarchive */,
@@ -483,7 +484,6 @@
 		C5FA67E31BABD8CD00754302 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				C5FA67E51BABD95B00754302 /* config.h */,
 				C5FA67E61BABD95B00754302 /* archive.h */,
 				C5FA67E71BABD95B00754302 /* archive_cmdline_private.h */,
 				C5FA67E81BABD95B00754302 /* archive_crc32.h */,
